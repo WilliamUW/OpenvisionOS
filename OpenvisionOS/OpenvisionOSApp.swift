@@ -11,7 +11,7 @@ import SwiftUI
 struct OpenvisionOSApp: App {
     var body: some Scene {
         WindowGroup {
-            FlowerPotView()
+            AirPodsMaxAnimation()
         }
         .windowStyle(.plain)
     }

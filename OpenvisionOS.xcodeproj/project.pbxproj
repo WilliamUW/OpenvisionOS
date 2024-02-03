@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3453AC312B6F022F007ABBC7 /* AirForce.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 3453AC302B6F022F007ABBC7 /* AirForce.usdz */; };
+		3453AC332B6F0513007ABBC7 /* pancakes.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 3453AC322B6F0513007ABBC7 /* pancakes.usdz */; };
+		3453AC352B6F051F007ABBC7 /* toy_biplane_idle.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 3453AC342B6F051F007ABBC7 /* toy_biplane_idle.usdz */; };
 		845B542D2B49112600084428 /* NewYearFireworksTwentyFour.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BD2A282B429191004E72EC /* NewYearFireworksTwentyFour.swift */; };
 		845B542F2B49117200084428 /* FlowerPotView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846683632B482421005E2879 /* FlowerPotView.swift */; };
 		8464901C2B0067D500418B05 /* RealityKitContent in Frameworks */ = {isa = PBXBuildFile; productRef = 8464901B2B0067D500418B05 /* RealityKitContent */; };
@@ -41,6 +44,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3453AC302B6F022F007ABBC7 /* AirForce.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = AirForce.usdz; sourceTree = "<group>"; };
+		3453AC322B6F0513007ABBC7 /* pancakes.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = pancakes.usdz; sourceTree = "<group>"; };
+		3453AC342B6F051F007ABBC7 /* toy_biplane_idle.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = toy_biplane_idle.usdz; sourceTree = "<group>"; };
 		846490162B0067D500418B05 /* OpenvisionOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OpenvisionOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8464901A2B0067D500418B05 /* RealityKitContent */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = RealityKitContent; sourceTree = "<group>"; };
 		8464901D2B0067D500418B05 /* OpenvisionOSApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenvisionOSApp.swift; sourceTree = "<group>"; };
@@ -82,6 +88,9 @@
 		845B542B2B4910D200084428 /* AirPodsMax */ = {
 			isa = PBXGroup;
 			children = (
+				3453AC342B6F051F007ABBC7 /* toy_biplane_idle.usdz */,
+				3453AC322B6F0513007ABBC7 /* pancakes.usdz */,
+				3453AC302B6F022F007ABBC7 /* AirForce.usdz */,
 				846490382B00680800418B05 /* Airpods_Max.usdz */,
 				8464903C2B006E4900418B05 /* Airpods_Max_Pink.usdz */,
 				8464903A2B006E3D00418B05 /* kulaklıksketchfab.usdz */,
@@ -252,10 +261,13 @@
 			files = (
 				846490392B00680800418B05 /* Airpods_Max.usdz in Resources */,
 				8464903B2B006E3D00418B05 /* kulaklıksketchfab.usdz in Resources */,
+				3453AC332B6F0513007ABBC7 /* pancakes.usdz in Resources */,
 				8466836C2B4833A1005E2879 /* Flower-Port.usdz in Resources */,
+				3453AC352B6F051F007ABBC7 /* toy_biplane_idle.usdz in Resources */,
 				846490252B0067D900418B05 /* Preview Assets.xcassets in Resources */,
 				846490222B0067D900418B05 /* Assets.xcassets in Resources */,
 				8466836F2B4833BA005E2879 /* BgSparcle.usdz in Resources */,
+				3453AC312B6F022F007ABBC7 /* AirForce.usdz in Resources */,
 				8464903D2B006E4900418B05 /* Airpods_Max_Pink.usdz in Resources */,
 				846683722B4833C4005E2879 /* pointSparkle.usdz in Resources */,
 				84BD2A2B2B4291F9004E72EC /* newYear.usdz in Resources */,
