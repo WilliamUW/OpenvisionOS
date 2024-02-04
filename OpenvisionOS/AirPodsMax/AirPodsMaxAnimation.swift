@@ -8,6 +8,8 @@ struct AirPodsMaxAnimation: View {
     @State private var showPancakes = false
     @State private var showToyBiplane = false
     @State private var showBattleSpaceship = false
+    @State private var showIO = false
+    @State private var showIgnition = false
 
     var body: some View {
             
@@ -95,32 +97,63 @@ struct AirPodsMaxAnimation: View {
                     ProgressView()
                 }
             }
+            if showIO {
+                Model3D(named: "Io_1_3643") { model in
+                    model
+                        .resizable()
+                        .aspectRatio(contentMode: .fit)
+                        .scaleEffect(1.5)
+                        .phaseAnimator([false, true]) { AirPodsMax, threeDYRotate in
+                            AirPodsMax
+                                .rotation3DEffect(.degrees(threeDYRotate ? 0 : -1200), axis: (x: 0.1, y: 0.1, z: 0.1))
+                        } animation: { threeDYRotate in
+                                .linear(duration: 8).repeatForever(autoreverses: false)
+                        }
+                } placeholder: {
+                    ProgressView()
+                }
+            }
+            if showIgnition {
+                Model3D(named: "ignition") { model in
+                    model
+                        .resizable()
+                        .aspectRatio(contentMode: .fit)
+                        .scaleEffect(1)
+                        .phaseAnimator([false, true]) { AirPodsMax, threeDYRotate in
+                            AirPodsMax
+                                .rotation3DEffect(.degrees(threeDYRotate ? 0 : -1200), axis: (x: 0.1, y: 0.1, z: 0.1))
+                        } animation: { threeDYRotate in
+                                .linear(duration: 8).repeatForever(autoreverses: false)
+                        }
+                } placeholder: {
+                    ProgressView()
+                }
+            }
             ScrollView {
                 VStack {
+                    Text("Collectibles")
                     HStack {
                         Button("Toggle AirPods Max") {
                             showAirPodsMax.toggle()
                         }
-                        
-                        
-                        
                         Button("Toggle AirForce") {
                             showAirForce.toggle()
                         }
-                        
-                        
-                        
                         Button("Toggle Pancakes") {
                             showPancakes.toggle()
                         }
-                        
-                        
-                        
                         Button("Toggle Toy Biplane") {
                             showToyBiplane.toggle()
                         }
-                        
-                        
+                        Button("Toggle ignition") {
+                            showIgnition.toggle()
+                        }
+                    }
+                    Text("Space!")
+                    HStack {
+                        Button("Toggle IO") {
+                            showIO.toggle()
+                        }
                         Button("Toggle Earth") {
                             showBattleSpaceship.toggle()
                         }
