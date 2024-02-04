@@ -10,6 +10,11 @@ struct AirPodsMaxAnimation: View {
     @State private var showBattleSpaceship = false
     @State private var showIO = false
     @State private var showIgnition = false
+    
+    func openURL(urlString: String) {
+            guard let url = URL(string: urlString) else { return }
+            UIApplication.shared.open(url)
+        }
 
     var body: some View {
             
@@ -158,7 +163,22 @@ struct AirPodsMaxAnimation: View {
                             showBattleSpaceship.toggle()
                         }
                     }
-
+                    Text("Music!")
+                    HStack {
+                        Button(action: {
+                                    // Call the function and pass the URL as a parameter
+                                    openURL(urlString: "https://www.example.com")
+                                }) {
+                                    // Use HStack for horizontal layout or VStack for vertical layout
+                                    HStack {
+                                        Image("teddy") // System image
+                                            .resizable()
+                                            .aspectRatio(contentMode: .fit)
+                                            .frame(width: 100, height: 100)
+                                    }
+                                }
+                             
+                    }
                     
                 }
                 .navigationTitle("Eyetunes")
