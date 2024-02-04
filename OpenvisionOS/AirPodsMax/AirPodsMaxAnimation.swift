@@ -10,6 +10,55 @@ struct AirPodsMaxAnimation: View {
     @State private var showBattleSpaceship = false
 
     var body: some View {
+        if showBattleSpaceship {
+            Model3D(named: "Earth_1_12756") { model in
+                model
+                    .resizable()
+                    .aspectRatio(contentMode: .fit)
+                    .scaleEffect(1.5)
+                    .opacity(1.0) // Ensure full opacity
+                    .phaseAnimator([false, true]) { AirPodsMax, threeDYRotate in
+                        AirPodsMax
+                            .rotation3DEffect(.degrees(threeDYRotate ? 0 : -1200), axis: (x: 0.1, y: 0.1, z: 0.1))
+                    } animation: { threeDYRotate in
+                        .linear(duration: 4).repeatForever(autoreverses: false)
+                    }
+            } placeholder: {
+                ProgressView()
+            }                    }
+        
+        if showAirForce {
+            Model3D(named: "AirForce") { model in
+                model
+                    .resizable()
+                    .aspectRatio(contentMode: .fit)
+                    .scaleEffect(1)
+                    .phaseAnimator([false, true]) { AirPodsMax, threeDYRotate in
+                        AirPodsMax
+                            .rotation3DEffect(.degrees(threeDYRotate ? 0 : -1200), axis: (x: 0.1, y: 0.1, z: 0.1))
+                    } animation: { threeDYRotate in
+                        .linear(duration: 8).repeatForever(autoreverses: false)
+                    }
+            } placeholder: {
+                ProgressView()
+            }                    }
+        
+        if showAirPodsMax {
+            Model3D(named: "Airpods_Max_Pink") { model in
+                model
+                    .resizable()
+                    .aspectRatio(contentMode: .fit)
+                    .scaleEffect(0.3)
+                    .phaseAnimator([false, true]) { AirPodsMax, threeDYRotate in
+                        AirPodsMax
+                            .rotation3DEffect(.degrees(threeDYRotate ? 0 : -1200), axis: (x: 0.1, y: 0.1, z: 0.1))
+                    } animation: { threeDYRotate in
+                        .linear(duration: 8).repeatForever(autoreverses: false)
+                    }
+            } placeholder: {
+                ProgressView()
+            }
+        }
         NavigationStack {
             ScrollView {
                 VStack {
@@ -17,42 +66,13 @@ struct AirPodsMaxAnimation: View {
                         showAirPodsMax.toggle()
                     }
 
-                    if showAirPodsMax {
-                        Model3D(named: "Airpods_Max_Pink") { model in
-                            model
-                                .resizable()
-                                .aspectRatio(contentMode: .fit)
-                                .scaleEffect(0.3)
-                                .phaseAnimator([false, true]) { AirPodsMax, threeDYRotate in
-                                    AirPodsMax
-                                        .rotation3DEffect(.degrees(threeDYRotate ? 0 : -1200), axis: (x: 0.1, y: 0.1, z: 0.1))
-                                } animation: { threeDYRotate in
-                                    .linear(duration: 8).repeatForever(autoreverses: false)
-                                }
-                        } placeholder: {
-                            ProgressView()
-                        }
-                    }
+                    
 
                     Button("Toggle AirForce") {
                         showAirForce.toggle()
                     }
 
-                    if showAirForce {
-                        Model3D(named: "AirForce") { model in
-                            model
-                                .resizable()
-                                .aspectRatio(contentMode: .fit)
-                                .scaleEffect(0.3)
-                                .phaseAnimator([false, true]) { AirPodsMax, threeDYRotate in
-                                    AirPodsMax
-                                        .rotation3DEffect(.degrees(threeDYRotate ? 0 : -1200), axis: (x: 0.1, y: 0.1, z: 0.1))
-                                } animation: { threeDYRotate in
-                                    .linear(duration: 8).repeatForever(autoreverses: false)
-                                }
-                        } placeholder: {
-                            ProgressView()
-                        }                    }
+                    
 
                     Button("Toggle Pancakes") {
                         showPancakes.toggle()
@@ -94,25 +114,11 @@ struct AirPodsMaxAnimation: View {
                             ProgressView()
                         }                    }
 
-                    Button("Toggle BattleSpaceship") {
+                    Button("Toggle Earth") {
                         showBattleSpaceship.toggle()
                     }
 
-                    if showBattleSpaceship {
-                        Model3D(named: "Airpods_Max_Pink") { model in
-                            model
-                                .resizable()
-                                .aspectRatio(contentMode: .fit)
-                                .scaleEffect(0.3)
-                                .phaseAnimator([false, true]) { AirPodsMax, threeDYRotate in
-                                    AirPodsMax
-                                        .rotation3DEffect(.degrees(threeDYRotate ? 0 : -1200), axis: (x: 0.1, y: 0.1, z: 0.1))
-                                } animation: { threeDYRotate in
-                                    .linear(duration: 8).repeatForever(autoreverses: false)
-                                }
-                        } placeholder: {
-                            ProgressView()
-                        }                    }
+                    
                 }
                 .navigationTitle("Amos' Models")
                 .toolbar {
@@ -124,6 +130,7 @@ struct AirPodsMaxAnimation: View {
                         }
                     }
                 }
+                
             }
         }
     }

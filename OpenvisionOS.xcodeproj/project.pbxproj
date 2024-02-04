@@ -10,6 +10,8 @@
 		3453AC312B6F022F007ABBC7 /* AirForce.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 3453AC302B6F022F007ABBC7 /* AirForce.usdz */; };
 		3453AC332B6F0513007ABBC7 /* pancakes.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 3453AC322B6F0513007ABBC7 /* pancakes.usdz */; };
 		3453AC352B6F051F007ABBC7 /* toy_biplane_idle.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 3453AC342B6F051F007ABBC7 /* toy_biplane_idle.usdz */; };
+		3453AC382B6F0B6D007ABBC7 /* Earth_1_12756.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 3453AC372B6F0B6D007ABBC7 /* Earth_1_12756.usdz */; };
+		3453AC3A2B6F0F0B007ABBC7 /* Io_1_3643.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 3453AC392B6F0F0B007ABBC7 /* Io_1_3643.usdz */; };
 		845B542D2B49112600084428 /* NewYearFireworksTwentyFour.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BD2A282B429191004E72EC /* NewYearFireworksTwentyFour.swift */; };
 		845B542F2B49117200084428 /* FlowerPotView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846683632B482421005E2879 /* FlowerPotView.swift */; };
 		8464901C2B0067D500418B05 /* RealityKitContent in Frameworks */ = {isa = PBXBuildFile; productRef = 8464901B2B0067D500418B05 /* RealityKitContent */; };
@@ -47,6 +49,8 @@
 		3453AC302B6F022F007ABBC7 /* AirForce.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = AirForce.usdz; sourceTree = "<group>"; };
 		3453AC322B6F0513007ABBC7 /* pancakes.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = pancakes.usdz; sourceTree = "<group>"; };
 		3453AC342B6F051F007ABBC7 /* toy_biplane_idle.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = toy_biplane_idle.usdz; sourceTree = "<group>"; };
+		3453AC372B6F0B6D007ABBC7 /* Earth_1_12756.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = Earth_1_12756.usdz; sourceTree = "<group>"; };
+		3453AC392B6F0F0B007ABBC7 /* Io_1_3643.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = Io_1_3643.usdz; sourceTree = "<group>"; };
 		846490162B0067D500418B05 /* OpenvisionOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OpenvisionOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8464901A2B0067D500418B05 /* RealityKitContent */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = RealityKitContent; sourceTree = "<group>"; };
 		8464901D2B0067D500418B05 /* OpenvisionOSApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenvisionOSApp.swift; sourceTree = "<group>"; };
@@ -88,6 +92,8 @@
 		845B542B2B4910D200084428 /* AirPodsMax */ = {
 			isa = PBXGroup;
 			children = (
+				3453AC392B6F0F0B007ABBC7 /* Io_1_3643.usdz */,
+				3453AC372B6F0B6D007ABBC7 /* Earth_1_12756.usdz */,
 				3453AC342B6F051F007ABBC7 /* toy_biplane_idle.usdz */,
 				3453AC322B6F0513007ABBC7 /* pancakes.usdz */,
 				3453AC302B6F022F007ABBC7 /* AirForce.usdz */,
@@ -260,11 +266,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				846490392B00680800418B05 /* Airpods_Max.usdz in Resources */,
+				3453AC3A2B6F0F0B007ABBC7 /* Io_1_3643.usdz in Resources */,
 				8464903B2B006E3D00418B05 /* kulaklıksketchfab.usdz in Resources */,
 				3453AC332B6F0513007ABBC7 /* pancakes.usdz in Resources */,
 				8466836C2B4833A1005E2879 /* Flower-Port.usdz in Resources */,
 				3453AC352B6F051F007ABBC7 /* toy_biplane_idle.usdz in Resources */,
 				846490252B0067D900418B05 /* Preview Assets.xcassets in Resources */,
+				3453AC382B6F0B6D007ABBC7 /* Earth_1_12756.usdz in Resources */,
 				846490222B0067D900418B05 /* Assets.xcassets in Resources */,
 				8466836F2B4833BA005E2879 /* BgSparcle.usdz in Resources */,
 				3453AC312B6F022F007ABBC7 /* AirForce.usdz in Resources */,
