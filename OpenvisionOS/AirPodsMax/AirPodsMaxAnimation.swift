@@ -59,6 +59,39 @@ struct AirPodsMaxAnimation: View {
                 ProgressView()
             }
         }
+        if showPancakes {
+            Model3D(named: "pancakes") { model in
+                model
+                    .resizable()
+                    .aspectRatio(contentMode: .fit)
+                    .scaleEffect(0.3)
+                    .phaseAnimator([false, true]) { AirPodsMax, threeDYRotate in
+                        AirPodsMax
+                            .rotation3DEffect(.degrees(threeDYRotate ? 0 : -1200), axis: (x: 0.1, y: 0.1, z: 0.1))
+                    } animation: { threeDYRotate in
+                            .linear(duration: 8).repeatForever(autoreverses: false)
+                    }
+            } placeholder: {
+                ProgressView()
+            }
+        }
+        if showToyBiplane {
+            Model3D(named: "toy_biplane_idle") { model in
+                model
+                    .resizable()
+                    .aspectRatio(contentMode: .fit)
+                    .scaleEffect(0.3)
+                    .phaseAnimator([false, true]) { AirPodsMax, threeDYRotate in
+                        AirPodsMax
+                            .rotation3DEffect(.degrees(threeDYRotate ? 0 : -1200), axis: (x: 0.1, y: 0.1, z: 0.1))
+                    } animation: { threeDYRotate in
+                            .linear(duration: 8).repeatForever(autoreverses: false)
+                    }
+            } placeholder: {
+                ProgressView()
+            }
+        }
+
         NavigationStack {
             ScrollView {
                 VStack {
@@ -78,42 +111,13 @@ struct AirPodsMaxAnimation: View {
                         showPancakes.toggle()
                     }
 
-                    if showPancakes {
-                        Model3D(named: "pancakes") { model in
-                            model
-                                .resizable()
-                                .aspectRatio(contentMode: .fit)
-                                .scaleEffect(0.3)
-                                .phaseAnimator([false, true]) { AirPodsMax, threeDYRotate in
-                                    AirPodsMax
-                                        .rotation3DEffect(.degrees(threeDYRotate ? 0 : -1200), axis: (x: 0.1, y: 0.1, z: 0.1))
-                                } animation: { threeDYRotate in
-                                    .linear(duration: 8).repeatForever(autoreverses: false)
-                                }
-                        } placeholder: {
-                            ProgressView()
-                        }                    }
+                    
 
                     Button("Toggle Toy Biplane") {
                         showToyBiplane.toggle()
                     }
 
-                    if showToyBiplane {
-                        Model3D(named: "toy_biplane_idle") { model in
-                            model
-                                .resizable()
-                                .aspectRatio(contentMode: .fit)
-                                .scaleEffect(0.3)
-                                .phaseAnimator([false, true]) { AirPodsMax, threeDYRotate in
-                                    AirPodsMax
-                                        .rotation3DEffect(.degrees(threeDYRotate ? 0 : -1200), axis: (x: 0.1, y: 0.1, z: 0.1))
-                                } animation: { threeDYRotate in
-                                    .linear(duration: 8).repeatForever(autoreverses: false)
-                                }
-                        } placeholder: {
-                            ProgressView()
-                        }                    }
-
+                    
                     Button("Toggle Earth") {
                         showBattleSpaceship.toggle()
                     }
